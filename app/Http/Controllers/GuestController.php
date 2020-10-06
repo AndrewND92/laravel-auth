@@ -11,4 +11,10 @@ class GuestController extends Controller
        $emps = Employee::all();
        return view('emp-home', compact('emps'));
      }
+
+     public function show($id){
+
+       $emp = Employee::findOrFail($id);
+       return view ('emp-show', compact('emp'));
+     }
 }

@@ -9,11 +9,16 @@
                 <div class="card-header">Employees</div>
 
                 <div class="card-body">
+
                      @foreach ($emps as $emp)
                       <li>
-                        {{ $emp -> firstname }}
+                        <a href="{{route('emp.show', $emp -> id)}}">
+                            {{ $emp -> firstname }}
+                          {{ $emp -> lastname }}
+                        </a>
                       </li>
-                     @endforeach
+                    @endforeach
+
                 </div>
             </div>
         </div>
