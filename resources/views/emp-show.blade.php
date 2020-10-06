@@ -16,13 +16,17 @@
 
 
                   <ul>
-                    firstname: {{$emp -> firstname}}<br>
-                    lastname: {{$emp -> lastname}}<br>
-                    date of birth: {{$emp -> date_of_birth}}<br>
-                    private code: {{$emp -> private_code}}<br>
-                    location id: {{$emp -> location_id}}<br>
+                    Firstname: {{$emp -> firstname}}<br>
+                    Lastname: {{$emp -> lastname}}<br>
+                    Date of Birth: {{$emp -> date_of_birth}}<br>
+                    Private Code: {{$emp -> private_code}}<br>
+                    Location: {{$emp -> location -> city}}<br>
                   </ul>
 
+                  <br>
+
+                  <a class="btn btn-primary" href="">Edit</a>
+                  <a class="btn btn-danger" href="{{ route('emp.delete', $emp -> id ) }}">Delete</a>
 
                 </div>
             </div>
