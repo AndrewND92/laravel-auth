@@ -24,9 +24,14 @@
                   </ul>
 
                   <br>
+                  @auth
+                    <a class="btn btn-primary" href=""> Edit </a>
+                    <a class="btn btn-danger" href="{{ route('emp.delete', $emp -> id ) }}">Delete</a>
+                    @else
+                      Please login!
 
-                  <a class="btn btn-primary" href="">Edit</a>
-                  <a class="btn btn-danger" href="{{ route('emp.delete', $emp -> id ) }}">Delete</a>
+                  @endauth
+
 
                 </div>
             </div>

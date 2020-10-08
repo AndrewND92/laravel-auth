@@ -8,4 +8,4 @@ Route::get('/', 'GuestController@index') -> name('emp.index');
 
 Route::get('/show/{id}', 'GuestController@show') -> name('emp.show');
 
-Route::get('/delete/{id}', 'GuestController@delete') -> name('emp.delete');
+Route::get('/delete/{id}', 'LoggedController@delete') -> name('emp.delete');

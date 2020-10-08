@@ -16,11 +16,7 @@ class GuestController extends Controller
        return view ('emp-show', compact('emp'));
      }
 
-     public function delete($id){
-       $emp = Employee::findOrFail($id);
-       $emp -> delete();
-       return redirect() -> route('emp.index');
-     }
+     
 
 
 
